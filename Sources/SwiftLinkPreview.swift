@@ -300,7 +300,7 @@ extension SwiftLinkPreview {
                                                                          .split( separator: "=", maxSplits: 1 ).last,
                                                let redirectURL = URL( string: self.addImagePrefixIfNeeded( String( redirectString ), url: url ) ),
                                                shouldRefresh && !isRedirectURL {
-                                                self.unshortenURL( redirectURL, cancellable: cancellable, completion: completion, onError: onError )
+                                                self.unshortenURL( redirectURL, cancellable: cancellable, isRedirectURL: true, completion: completion, onError: onError )
                                                 return
                                             }
                                         }
